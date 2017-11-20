@@ -75,9 +75,20 @@
 
 %\setbeamertemplate{navigation symbols}{} % To remove the navigation symbols from the bottom of all slides uncomment this line
 }
-
+\usepackage[
+backend=biber,
+style=authoryear-icomp,
+sortlocale=de_DE,
+natbib=true,
+url=false, 
+doi=true,
+eprint=false
+]{biblatex}
+\addbibresource{bib.bib}
 \usepackage{graphicx} % Allows including images
 \graphicspath{{Images/}}
+\usepackage{caption}
+\captionsetup[figure]{font=footnotesize,labelfont=footnotesize}
 \usepackage{booktabs} % Allows the use of \toprule, \midrule and \bottomrule in tables
 
 %----------------------------------------------------------------------------------------
@@ -124,19 +135,22 @@
 	\vbox to \textheight{
 		\vfill
 		\centering
+		\begin{figure}
 		\includegraphics[width=1\textwidth]{biggest-data-breaches.jpg}
+		\caption{www.csoonline.com/article/2130877/data-breach/the-16-biggest-data-breaches-of-the-21st-century.html}
+		\end{figure}
 		\vfill
 	}
 \end{minipage}\hfill
 \begin{minipage}{0.6\textwidth}
 	\vbox to \textheight{
 		\begin{itemize}
-			\item 1 We trust that companies will protect our data
-			\item 2 Bata breaches are commonplace today
-			\item 3 Unencrypted data is often leaked
-			\item 4 Can we encrypt data before it is stored?
-			%\item 5
-			%\item 6
+			\item We trust that companies will protect our data
+			\item Bata breaches are commonplace today
+			\item Unencrypted data is often leaked
+			\item There is currently no or little legal requirement 
+			\item 
+			\item Can we encrypt data before it is stored?
 		\end{itemize}
 		\vfill
 	}
