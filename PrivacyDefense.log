@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.10.15)  20 NOV 2017 11:45
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.10.15)  2 DEC 2017 16:45
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1322,14 +1322,20 @@ Overfull \hbox (12.31749pt too wide) has occurred while \output is active
 \tf@snm=\write9
 \openout9 = `PrivacyDefense.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 239.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 239.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 240.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 240.
  (./PrivacyDefense.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 239.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 239.
-Package rerunfilecheck Info: File `PrivacyDefense.out' has not changed.
-(rerunfilecheck)             Checksum: 263D307720953EF2ACC3DBC3B67AB706;164.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 240.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 240.
 
+
+Package rerunfilecheck Warning: File `PrivacyDefense.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `PrivacyDefense.out':
+(rerunfilecheck)             Before: 263D307720953EF2ACC3DBC3B67AB706;164
+(rerunfilecheck)             After:  3356521E69200203139C26B6CB5C981F;203.
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 1.0pt have occurred.
@@ -1337,11 +1343,11 @@ LaTeX Font Warning: Size substitutions with differences
 Package logreq Info: Writing requests to 'PrivacyDefense.run.xml'.
 \openout1 = `PrivacyDefense.run.xml'.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 239.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 240.
  ) 
 Here is how much of TeX's memory you used:
- 23307 strings out of 493029
- 442490 string characters out of 6136233
+ 23308 strings out of 493029
+ 442500 string characters out of 6136233
  849264 words of memory out of 5000000
  26341 multiletter control sequences out of 15000+600000
  11710 words of font info for 42 fonts, out of 8000000 for 9000
@@ -1356,8 +1362,8 @@ mf-dist/fonts/type1/public/amsfonts/cm/cmss9.pfb></usr/share/texlive/texmf-dist
 /type1/public/amsfonts/cm/cmssi9.pfb>
 Output written on PrivacyDefense.pdf (12 pages, 522896 bytes).
 PDF statistics:
- 404 PDF objects out of 1000 (max. 8388607)
- 363 compressed objects within 4 object streams
- 29 named destinations out of 1000 (max. 500000)
+ 405 PDF objects out of 1000 (max. 8388607)
+ 364 compressed objects within 4 object streams
+ 30 named destinations out of 1000 (max. 500000)
  102 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -6,4 +6,6 @@
 \defcounter {refsection}{0}\relax 
 \beamer@subsectionintoc {1}{1}{Subsection Example}{3}{0}{1}
 \defcounter {refsection}{0}\relax 
-\beamer@sectionintoc {2}{Second Section}{6}{0}{2}
+\beamer@sectionintoc {2}{Introduction}{3}{0}{2}
+\defcounter {refsection}{0}\relax 
+\beamer@sectionintoc {3}{Method}{6}{0}{3}
