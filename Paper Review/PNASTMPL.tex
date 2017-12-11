@@ -110,7 +110,7 @@
 \contributor{Submitted to Proceedings of the National Academy of Sciences of the United States of America}
 \url{www.pnas.org/cgi/doi/10.1073/pnas.0709640104}
 \copyrightyear{2017}
-\issuedate{Issue Date}
+\issuedate{December 9th 2017}
 \volume{Volume}
 \issuenumber{Issue Number}
 
@@ -167,7 +167,7 @@ Omar Elsabrout\affil{1}{University of Oregon}}
 %----------------------------------------------------------------------------------------
 
 \begin{abstract}
-Since the growth rate of the Internet is almost exponential, it has a drastic effect on people's lives even the ones who do not use it. Such effect is accompanied with many issues such as user privacy. It is not settled until now how service providers are allowed to use stored information of the users and compromise their privacy. J\"{o}rg Wicker and Stefan Kramer introduce a tool that utilizes machine learning and data mining to confuse search engines to protect the user's privacy by obfuscating exploited personal information. Not only methods are introduced for such technique, but also an experiment to evaluate its results indicating whether this approach should be investigated further.
+Since the growth rate of the Internet is almost exponential, it has a drastic effect on people's lives everyday. Such effect is accompanied with many issues such as user privacy. It is not settled until now how service providers are allowed to use stored information of the users and compromise their privacy. J\"{o}rg Wicker and Stefan Kramer introduce a tool that utilizes machine learning and data mining to confuse search engines to protect the user's privacy by obfuscating exploited personal information. Not only methods are introduced for such technique, but also an experiment to evaluate its results indicating whether this approach should be investigated further.
 \end{abstract}
 
 %------------------------------------------------
@@ -195,20 +195,27 @@ Since the growth rate of the Internet is almost exponential, it has a drastic ef
 \section{Introduction}
 
 \dropcap{T}he motivation behind providing this approach is that the current privacy protection have major flaws. On one hand, users rely on service providers to process their data, on the other hand, providers do not have any advantage in user privacy preserving technologies as the analysis of this data and sharing it with advertisers is the basis of their business model. No doubt that providers such as search engines must store information on users. Nevertheless, these data can be used to generate detailed profiles on a large scale and identify unidentified users. As mentioned, J\"{o}rg Wicker and Stefan Kramer target privacy from another perspective. Hence, they suggest a user tools to defend her or his privacy so the user does not have to rely on the other uncontrollable side for this issue. Data is conventionally stored in large scales
-and analyzed automatically using data mining technologies. As a result, the intuitive approach to protect the user’s private information would be to flood the data storage with random data and hope the user’s interest or identity would be obfuscated. On the contrary, data mining algorithms are designed to distinguish a signal from random noise. Consequently, this approach will fail in most settings where the data is analyzed with sophisticated data mining algorithms. The paper tackles this issue in a more highly developed manner as it gives a brief discussion of the user and search engine model in addition to the proposed method. Moreover, it shows the details of the experimental set-up and results. Taking into account, the paper should be considered as proof-of-concept and not a final product ready for the market.\cite{CLAcha1}.
+and analyzed automatically using data mining technologies. As a result, the intuitive approach to protect the user’s private information would be to flood the data storage with random data and hope the user’s interest or identity would be obfuscated. On the contrary, data mining algorithms are designed to distinguish a signal from random noise. Consequently, this approach will fail in most settings where the data is analyzed with sophisticated data mining algorithms. The paper tackles this issue in a more highly developed manner as it gives a brief discussion of the user and search engine model in addition to the proposed method. Moreover, it shows the details of the experimental set-up and results. Taking into account, the paper should be considered as proof-of-concept and not a final product ready for the market. In this review, we present pointers for the given approach and criticize it by explaining its strong arguments and also its weak ones. This is not meant to be a summary of the tackled paper as we merely mention concepts and do not dive into details.\cite{CLAcha1}.
 
-\begin{equation}
-\mfrac{D \theta}{Dt}=\mfrac{\pr \theta}{\pr t} + u\cdot \nabla
-\theta=0 \label{qg1}
-\end{equation}
+%\begin{equation}
+%\mfrac{D \theta}{Dt}=\mfrac{\pr \theta}{\pr t} + u\cdot \nabla
+%\theta=0 \label{qg1}
+%\end{equation}
 
-Referencing equation \eqref{qg1}. Praesent volutpat, nibh in dignissim commodo, tellus justo consequat erat, vel consequat mi arcu vel lectus. Aliquam a tellus nec felis sagittis consequat. Quisque convallis imperdiet neque a tempor. Nulla non erat urna. Mauris vel lorem magna, tristique auctor ipsum. Aliquam pharetra eleifend massa. Donec porttitor sagittis luctus. Aliquam pretium luctus leo quis congue. Morbi vel felis mi. Suspendisse viverra tortor pretium orci lacinia eleifend. Phasellus aliquam, nunc eu cursus feugiat, erat odio porttitor libero, quis accumsan orci ipsum ut lorem. Vestibulum pharetra malesuada egestas. Sed non orci sit amet erat suscipit fringilla in et diam. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nunc ut rhoncus nulla. Aenean porta rhoncus suscipit.
+%Referencing equation \eqref{qg1}. 
 
 %------------------------------------------------
 
-\section{Method}
+\section{Discussion}
 
-Mauris vel lorem magna, tristique auctor ipsum. Aliquam pharetra eleifend massa. Donec porttitor sagittis luctus. Aliquam pretium luctus leo quis congue. Morbi vel felis mi. Referencing Table \ref{sampletable}. Referencing Figure \ref{placeholder}.
+One of the first obstacles that is faced and discussed in the paper, is the user model. The authors admit a problem of major simplification for the user's interest categories as a result of reducing these categories to one at a time. The reason behind such simplification is to simplify the evaluation so they can compare the
+reaction of the search engine to one interest category. Although they stated that future work will address users with multiple interest categories and users with variably strong interest in multiple categories, we think that such simplification needs to be accompanied with assurances of the ability to upscale the model for multiple categories or at lease some pointers for such ability. These assurances are not provided which leaves the problem unattended. Nonetheless, another simplification is justified which is to only address query results that provided ads due to the problem's nature.
+
+Another obstacle that might be rather unavoidable is that obfuscating a search engine user's profile, even though if it protects the user's privacy, reduces the user's experience quality. A user who utilizes this approach will lose most of personalized services and automated customizations provided by search engines if not all of them. We know that this is a decision that users must make. However, it is a hard one as these services are more practical and useful so the trade-off might not be fair. The author's assumption that user prefers privacy overlooks the idea that the number of those users can be low in comparison with the ones who prefer personalization. Despite that, we think that it is still perfect to execute the obfuscation idea in form of a tool that can be easily deactivated if the user wanted. This does not affect the user's profile if he or she wishes to return to using the search engines normally. 
+
+In addition, obfuscating search engines and service providers waste their resources and invalidates their research results and statistical studies that might lead to new applications based on the user's needs. These needs are usually investigated by online surveys and mining user data which will be useless because of mining fake or randomized data. 
+
+%\ref{placeholder}.
 
 \section{Experiment}
 
@@ -216,27 +223,13 @@ Mauris vel lorem magna, tristique auctor ipsum. Aliquam pharetra eleifend massa.
 
 \subsubsection{Simulation 1}
 
-Vivamus magna enim, aliquet id cursus a, pharetra ut purus. Phasellus suscipit nisi iaculis mi vulputate id interdum velit dictum. Nam ullamcorper elit in lectus ultrices vitae volutpat massa gravida. Etiam sagittis commodo neque eget placerat. Sed et nisi faucibus metus interdum adipiscing id nec lacus. Donec ipsum diam, malesuada at euismod consectetur, placerat quis diam. Phasellus cursus semper viverra. Proin magna tortor, blandit in ultricies id, facilisis at nibh. Proin eu neque est. Etiam euismod auctor ante. Mauris mauris sem, tincidunt a placerat rutrum, porta id est. Aenean non velit porta eros condimentum facilisis at in nibh. Etiam cursus purus ut orci rhoncus sit amet semper eros porttitor. Etiam ac leo at ipsum tincidunt consequat ac non sapien. Aenean sed leo diam, venenatis pharetra odio.
-
-\subsubsection{Simulation 2}
-
-Suspendisse viverra eleifend nulla at facilisis. Nullam eget tellus orci. Cras sit amet lorem velit. Maecenas rhoncus pellentesque orci eget vulputate. Phasellus massa nisi, mattis nec elementum accumsan, blandit non neque. In ac enim elit, sit amet luctus ante. Cras feugiat commodo lectus, vitae convallis dui sagittis id. In in tellus lacus, sed lobortis eros. Phasellus sit amet eleifend velit. Duis ornare dapibus porttitor. Maecenas eros velit, dignissim at egestas in, tincidunt lacinia erat. Proin elementum mi vel lectus suscipit fringilla. Mauris justo est, ullamcorper in rutrum interdum, accumsan eget mi. Maecenas ut massa aliquet purus eleifend vehicula in a nisi. Fusce molestie cursus lacinia.
-
-\subsection{Real Data}
-
-Aliquam interdum pellentesque scelerisque. Sed tincidunt suscipit purus, id aliquet nulla vehicula quis. Duis sed nisl lorem. Vivamus erat ante, dignissim et aliquam vel, adipiscing vitae magna. Cras id dapibus metus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Proin ut lectus ut nisi congue ullamcorper. Ut ac turpis ligula. Sed faucibus bibendum nunc eget gravida.
+Vivamus magna enim, alique
 
 %------------------------------------------------
 
 \section{Discussion}
 
-Nam fermentum sapien at enim varius consectetur. Quisque lobortis imperdiet mauris, et accumsan libero vulputate vitae. Integer lacinia purus vel metus tempus suscipit. Curabitur ac sapien quis mauris euismod commodo. Sed pharetra sem elit. Fusce ultrices, mauris eu fermentum tempor, tellus sem ornare lectus, in convallis nunc urna id dolor. Donec convallis ligula vitae sem viverra fermentum. Mauris in ullamcorper erat. Donec ultrices tempus nibh quis vestibulum.
-
-Praesent volutpat, nibh in dignissim commodo, tellus justo consequat erat, vel consequat mi arcu vel lectus. Aliquam a tellus nec felis sagittis consequat. Quisque convallis imperdiet neque a tempor. Nulla non erat urna. Mauris vel lorem magna, tristique auctor ipsum. Aliquam pharetra eleifend massa. Donec porttitor sagittis luctus. Aliquam pretium luctus leo quis congue. Morbi vel felis mi. Suspendisse viverra tortor pretium orci lacinia eleifend. Phasellus aliquam, nunc eu cursus feugiat, erat odio porttitor libero, quis accumsan orci ipsum ut lorem. Vestibulum pharetra malesuada egestas. Sed non orci sit amet erat suscipit fringilla in et diam. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nunc ut rhoncus nulla. Aenean porta rhoncus suscipit.
-
-Vivamus magna enim, aliquet id cursus a, pharetra ut purus. Phasellus suscipit nisi iaculis mi vulputate id interdum velit dictum. Nam ullamcorper elit in lectus ultrices vitae volutpat massa gravida. Etiam sagittis commodo neque eget placerat. Sed et nisi faucibus metus interdum adipiscing id nec lacus. Donec ipsum diam, malesuada at euismod consectetur, placerat quis diam. Phasellus cursus semper viverra. Proin magna tortor, blandit in ultricies id, facilisis at nibh. Proin eu neque est. Etiam euismod auctor ante. Mauris mauris sem, tincidunt a placerat rutrum, porta id est. Aenean non velit porta eros condimentum facilisis at in nibh. Etiam cursus purus ut orci rhoncus sit amet semper eros porttitor. Etiam ac leo at ipsum tincidunt consequat ac non sapien. Aenean sed leo diam, venenatis pharetra odio.
-
-Suspendisse viverra eleifend nulla at facilisis. Nullam eget tellus orci. Cras sit amet lorem velit. Maecenas rhoncus pellentesque orci eget vulputate. Phasellus massa nisi, mattis nec elementum accumsan, blandit non neque. In ac enim elit, sit amet luctus ante. Cras feugiat commodo lectus, vitae convallis dui sagittis id. In in tellus lacus, sed lobortis eros. Phasellus sit amet eleifend velit. Duis ornare dapibus porttitor. Maecenas eros velit, dignissim at egestas in, tincidunt lacinia erat. Proin elementum mi vel lectus suscipit fringilla. Mauris justo est, ullamcorper in rutrum interdum, accumsan eget mi. Maecenas ut massa aliquet purus eleifend vehicula in a nisi. Fusce molestie cursus lacinia.
+Nam fermentum.
 
 %----------------------------------------------------------------------------------------
 %	MATERIALS AND METHODS
@@ -303,7 +296,7 @@ An appendix with a title.
 %----------------------------------------------------------------------------------------
 
 \begin{acknowledgments}
-This work was partially supported by a grant from the Spanish Ministry of Science and Technology.
+This work was part of an assignment for a research methodology course.
 \end{acknowledgments}
 
 %----------------------------------------------------------------------------------------
