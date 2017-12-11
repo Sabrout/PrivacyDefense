@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210 64-bit) (preloaded format=pdflatex 2017.4.26)  11 DEC 2017 07:14
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210 64-bit) (preloaded format=pdflatex 2017.4.26)  11 DEC 2017 07:36
 entering extended mode
 **./PNASTMPL.tex
 (PNASTMPL.tex
@@ -336,18 +336,18 @@ Missing character: There is no ™ in font cmr9!
 <placeholder.jpg, id=26, 351.3125pt x 193.72375pt>
 File: placeholder.jpg Graphic file (type jpg)
  <use placeholder.jpg>
-Package pdftex.def Info: placeholder.jpg used on input line 435.
+Package pdftex.def Info: placeholder.jpg used on input line 436.
 (pdftex.def)             Requested size: 203.99689pt x 112.49286pt.
 
 [3 <./placeholder.jpg>] (PNASTMPL.aux) ) 
 Here is how much of TeX's memory you used:
  3468 strings out of 493333
  43798 string characters out of 3139194
- 131092 words of memory out of 3000000
+ 132092 words of memory out of 3000000
  6954 multiletter control sequences out of 15000+200000
  14376 words of font info for 52 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 49i,11n,37p,1122b,344s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 49i,10n,37p,1122b,321s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Program Files/MiKTeX 2.9/fonts/type
 1/public/amsfonts/cm/cmbx9.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/
 amsfonts/cmextra/cmex9.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsf
@@ -365,7 +365,7 @@ cmsy6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy9.pfb
 ram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/latxfont/lcircle1.pfb><C:/Prog
 ram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Program
  Files/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
-Output written on PNASTMPL.pdf (3 pages, 207423 bytes).
+Output written on PNASTMPL.pdf (3 pages, 207643 bytes).
 PDF statistics:
  85 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
