@@ -109,7 +109,7 @@
 %% For PNAS Only:
 \contributor{Submitted to Proceedings of the National Academy of Sciences of the United States of America}
 \url{www.pnas.org/cgi/doi/10.1073/pnas.0709640104}
-\copyrightyear{2008}
+\copyrightyear{2017}
 \issuedate{Issue Date}
 \volume{Volume}
 \issuenumber{Issue Number}
@@ -122,7 +122,7 @@
 %	TITLE AND AUTHORS
 %----------------------------------------------------------------------------------------
 
-\title{Title of the publication} % For titles, only capitalize the first letter
+\title{Review on ``The best privacy defense is a good privacy offense: obfuscating a search engine user's profile''} % For titles, only capitalize the first letter
 
 %------------------------------------------------
 
@@ -150,13 +150,11 @@
 %% Javier de Ruiz Garcia\affil{2}{Universidad de Murcia, Bioquimica y Biologia
 %% Molecular, Murcia, Spain}, \and Franklin Sonnery\affil{2}{}}
 
-\author{John Smith\affil{1}{University of California},
-James Smith\affil{2}{University of Oregon}
+\author{Joshua Fenech\affil{1}{Jean Monnet University},
 \and
-Jane Smith\affil{1}{}}
+Omar Elsabrout\affil{1}{University of Oregon}}
 
-\contributor{Submitted to Proceedings of the National Academy of Sciences
-of the United States of America}
+\contributor{Submitted to the faculty of science and technology at Jean Monnet University}
 
 %----------------------------------------------------------------------------------------
 
@@ -169,12 +167,12 @@ of the United States of America}
 %----------------------------------------------------------------------------------------
 
 \begin{abstract}
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vehicula metus sapien. Suspendisse pulvinar, felis ut hendrerit aliquet, dui nisi bibendum erat, fermentum mattis enim nibh id arcu. Vestibulum ultrices eros sed odio tincidunt bibendum. Pellentesque fermentum ante vel nulla commodo fermentum. Vestibulum in augue sit amet libero viverra accumsan eu at magna. Sed at ligula quis nibh pharetra facilisis non eu libero. Suspendisse non quam sit amet massa luctus interdum sit amet in purus. Integer id orci elit, vitae sollicitudin lectus.
+Since the growth rate of the Internet is almost exponential, it has a drastic effect on people's lives even the ones who do not use it. Such effect is accompanied with many issues such as user privacy. It is not settled until now how service providers are allowed to use stored information of the users and compromise their privacy. J\"{o}rg Wicker and Stefan Kramer introduce a tool that utilizes machine learning and data mining to confuse search engines to protect the user's privacy by obfuscating exploited personal information. Not only methods are introduced for such technique, but also an experiment to evaluate its results indicating whether this approach should be investigated further.
 \end{abstract}
 
 %------------------------------------------------
 
-\keywords{Keyword1 | Keyword2 | Keyword3} % When adding keywords, separate each term with a straight line: |
+%\keywords{Keyword1 | Keyword2 | Keyword3} % When adding keywords, separate each term with a straight line: |
 
 %------------------------------------------------
 
@@ -185,7 +183,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vehicula metus sapi
 %% octadecyltrichlorosilane}
 
 % \abbreviations{}
-\abbreviations{SAM, self-assembled monolayer; OTS, octadecyltrichlorosilane}
+%\abbreviations{SAM, self-assembled monolayer; OTS, octadecyltrichlorosilane}
 
 %----------------------------------------------------------------------------------------
 %	PUBLICATION CONTENT
@@ -196,7 +194,8 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vehicula metus sapi
 
 \section{Introduction}
 
-\dropcap{N}am fermentum sapien at enim varius consectetur. Quisque lobortis imperdiet mauris, et accumsan libero vulputate vitae. Integer lacinia purus vel metus tempus suscipit. Curabitur ac sapien quis mauris euismod commodo. Sed pharetra sem elit. Fusce ultrices, mauris eu fermentum tempor, tellus sem ornare lectus, in convallis nunc urna id dolor. Donec convallis ligula vitae sem viverra fermentum. Mauris in ullamcorper erat. Donec ultrices tempus nibh quis vestibulum. This statement requires citation \cite{CLAcha1}.
+\dropcap{T}he motivation behind providing this approach is that the current privacy protection have major flaws. On one hand, users rely on service providers to process their data, on the other hand, providers do not have any advantage in user privacy preserving technologies as the analysis of this data and sharing it with advertisers is the basis of their business model. No doubt that providers such as search engines must store information on users. Nevertheless, these data can be used to generate detailed profiles on a large scale and identify unidentified users. As mentioned, J\"{o}rg Wicker and Stefan Kramer target privacy from another perspective. Hence, they suggest a user tools to defend her or his privacy so the user does not have to rely on the other uncontrollable side for this issue. Data is conventionally stored in large scales
+and analyzed automatically using data mining technologies. As a result, the intuitive approach to protect the user’s private information would be to flood the data storage with random data and hope the user’s interest or identity would be obfuscated. On the contrary, data mining algorithms are designed to distinguish a signal from random noise. Consequently, this approach will fail in most settings where the data is analyzed with sophisticated data mining algorithms. The paper tackles this issue in a more highly developed manner as it gives a brief discussion of the user and search engine model in addition to the proposed method. Moreover, it shows the details of the experimental set-up and results. Taking into account, the paper should be considered as proof-of-concept and not a final product ready for the market.\cite{CLAcha1}.
 
 \begin{equation}
 \mfrac{D \theta}{Dt}=\mfrac{\pr \theta}{\pr t} + u\cdot \nabla
@@ -207,9 +206,11 @@ Referencing equation \eqref{qg1}. Praesent volutpat, nibh in dignissim commodo, 
 
 %------------------------------------------------
 
-\section{Results}
+\section{Method}
 
 Mauris vel lorem magna, tristique auctor ipsum. Aliquam pharetra eleifend massa. Donec porttitor sagittis luctus. Aliquam pretium luctus leo quis congue. Morbi vel felis mi. Referencing Table \ref{sampletable}. Referencing Figure \ref{placeholder}.
+
+\section{Experiment}
 
 \subsection{Simulations}
 
