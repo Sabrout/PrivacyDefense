@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210 64-bit) (preloaded format=pdflatex 2017.4.26)  11 DEC 2017 07:14
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210 64-bit) (preloaded format=pdflatex 2017.4.26)  12 DEC 2017 14:26
 entering extended mode
 **./PNASTMPL.tex
 (PNASTMPL.tex
@@ -332,42 +332,50 @@ Missing character: There is no € in font cmr9!
 Missing character: There is no ™ in font cmr9!
  [1{C:/Users/omare/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}
 
-] [2]
-<placeholder.jpg, id=26, 351.3125pt x 193.72375pt>
-File: placeholder.jpg Graphic file (type jpg)
- <use placeholder.jpg>
-Package pdftex.def Info: placeholder.jpg used on input line 435.
-(pdftex.def)             Requested size: 203.99689pt x 112.49286pt.
+]
 
-[3 <./placeholder.jpg>] (PNASTMPL.aux) ) 
+ ======================================================================== 
+ C A R E F U L !!!!!
+ 
+ You have used \begin{figure}[h] !
+ If there are any figures that appear earlier on the page
+ they may be numbered incorrectly.
+ 
+ Please check this and every other page on which you have used 
+ \begin{figure}[h] !
+ 
+ ======================================================================== 
+
+<Figure.png, id=12, 681.29532pt x 368.1253pt>
+File: Figure.png Graphic file (type png)
+ <use Figure.png>
+Package pdftex.def Info: Figure.png used on input line 238.
+(pdftex.def)             Requested size: 204.39017pt x 110.43843pt.
+ (PNASTMPL.bbl)
+[2 <./Figure.png>] (PNASTMPL.aux) ) 
 Here is how much of TeX's memory you used:
- 3468 strings out of 493333
- 43798 string characters out of 3139194
- 131092 words of memory out of 3000000
- 6954 multiletter control sequences out of 15000+200000
- 14376 words of font info for 52 fonts, out of 3000000 for 9000
+ 3447 strings out of 493333
+ 43499 string characters out of 3139194
+ 132029 words of memory out of 3000000
+ 6931 multiletter control sequences out of 15000+200000
+ 13426 words of font info for 49 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 49i,11n,37p,1122b,344s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Program Files/MiKTeX 2.9/fonts/type
-1/public/amsfonts/cm/cmbx9.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/
-amsfonts/cmextra/cmex9.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsf
-onts/cm/cmmi5.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/c
-mmi6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi9.pfb>
-<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Progra
-m Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Program Files/Mi
-KTeX 2.9/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Program Files/MiKTeX 2.9/f
-onts/type1/public/amsfonts/cm/cmss10.pfb><C:/Program Files/MiKTeX 2.9/fonts/typ
-e1/public/amsfonts/cm/cmssbx10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/pub
-lic/amsfonts/cm/cmssi10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/ams
-fonts/cm/cmsy5.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/
-cmsy6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy9.pfb
-><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti9.pfb><C:/Prog
-ram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/latxfont/lcircle1.pfb><C:/Prog
-ram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Program
- Files/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
-Output written on PNASTMPL.pdf (3 pages, 207423 bytes).
+ 49i,11n,37p,1172b,249s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Program Files/MiKTeX 2.9/fonts/type1/pub
+lic/amsfonts/cm/cmbx9.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfo
+nts/cmextra/cmex9.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/
+cm/cmmi5.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi6.
+pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi9.pfb><C:/P
+rogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Program Fil
+es/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmss10.pfb><C:/Program Files/MiKTe
+X 2.9/fonts/type1/public/amsfonts/cm/cmssbx10.pfb><C:/Program Files/MiKTeX 2.9/
+fonts/type1/public/amsfonts/cm/cmssi10.pfb><C:/Program Files/MiKTeX 2.9/fonts/t
+ype1/public/amsfonts/cm/cmsy5.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/publ
+ic/amsfonts/cm/cmsy6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfon
+ts/latxfont/lcircle1.pfb>
+Output written on PNASTMPL.pdf (2 pages, 167881 bytes).
 PDF statistics:
- 85 PDF objects out of 1000 (max. 8388607)
+ 60 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  6 words of extra memory for PDF output out of 10000 (max. 10000000)
 
