@@ -195,7 +195,7 @@ Since the growth rate of the Internet is almost exponential, it has a drastic ef
 \section{Introduction}
 
 \dropcap{T}he motivation behind providing this approach is that the current privacy protection have major flaws. On one hand, users rely on service providers to process their data, on the other hand, providers do not have any advantage in user privacy preserving technologies as the analysis of this data and sharing it with advertisers is the basis of their business model. No doubt that providers such as search engines must store information on users. Nevertheless, these data can be used to generate detailed profiles on a large scale and identify unidentified users. As mentioned, J\"{o}rg Wicker and Stefan Kramer target privacy from another perspective. Hence, they suggest a user tools to defend her or his privacy so the user does not have to rely on the other uncontrollable side for this issue. Data is conventionally stored in large scales
-and analyzed automatically using data mining technologies. As a result, the intuitive approach to protect the user’s private information would be to flood the data storage with random data and hope the user’s interest or identity would be obfuscated. On the contrary, data mining algorithms are designed to distinguish a signal from random noise. Consequently, this approach will fail in most settings where the data is analyzed with sophisticated data mining algorithms. The paper tackles this issue in a more highly developed manner as it gives a brief discussion of the user and search engine model in addition to the proposed method. Moreover, it shows the details of the experimental set-up and results. Taking into account, the paper should be considered as proof-of-concept and not a final product ready for the market. In this review, we present pointers for the given approach and criticize it by explaining its strong arguments and also its weak ones. This is not meant to be a summary of the tackled paper as we merely mention concepts and do not dive into details.\cite{CLAcha1}. 
+and analyzed automatically using data mining technologies. As a result, the intuitive approach to protect the user’s private information would be to flood the data storage with random data and hope the user’s interest or identity would be obfuscated. On the contrary, data mining algorithms are designed to distinguish a signal from random noise. Consequently, this approach will fail in most settings where the data is analyzed with sophisticated data mining algorithms. The paper tackles this issue in a more highly developed manner as it gives a brief discussion of the user and search engine model in addition to the proposed method. Moreover, it shows the details of the experimental set-up and results. Taking into account, the paper should be considered as proof-of-concept and not a final product ready for the market. In this review, we present pointers for the given approach and criticize it by explaining its strong arguments and also its weak ones. This is not meant to be a summary of the tackled paper as we merely mention concepts and do not dive into details.\cite{DBLP:journals/datamine/WickerK17}. 
 
 %------------------------------------------------
 
@@ -247,10 +247,12 @@ According to Wicker's experiment, all users submit random queries from their bat
 
 \section{Conclusion}
 
-Freakin fuckin conclusion.
+To sum up, the experiment is successful to a certain extent with respect to the assumed limitations. Nevertheless, we still need further research and more elaborate experiment environments.
 
-%----------------------------------------------------------------------------------------
-%	MATERIALS AND METHODS
+There are more areas that deserve studying and should be tackled during the development of such tool like the fact that models of search engines also rely on time and date of the query which is a factor that should be considered and taken advantage of. At the end of the day, the major simplification of learning for only one interest is still the major concern and the greatest limitation of the tool. Future work is interesting as it can involve more feedback than just ads from search engines but also use more features that they provide to predict their models and reactions. This could lead to a more sophisticated tool and could provide a better privacy defense model.
+
+In this report, we discussed the main points of interest in the research paper while criticizing its weak and strong arguments. We started by the motivation behind the research in the introduction. Then, we presented how the discussion in the paper had strong arguments but with a few flaws. Afterwards, we discussed the method itself and how is it modeled which is the most important and interesting part of the paper. Last but not least, we mentioned how the results of the experiment and their environment contribute to the results and how they can improve.  
+
 %----------------------------------------------------------------------------------------
 
 %% Optional Materials and Methods Section
@@ -346,90 +348,64 @@ This work was part of an assignment for a research methodology course.
 %% Enter the largest bibliography number in the facing curly brackets
 %% following \begin{thebibliography}
 
-\begin{thebibliography}{10}
-\bibitem{BN}
-M.~Belkin and P.~Niyogi, {\em Using manifold structure for partially
-  labelled classification}, Advances in NIPS, 15 (2003).
+%\begin{thebibliography}{10}
+\bibliographystyle{plain}
+\bibliography{bib}
 
-\bibitem{BBG:EmbeddingRiemannianManifoldHeatKernel}
-P.~B\'erard, G.~Besson, and S.~Gallot, {\em Embedding {R}iemannian
-  manifolds by their heat kernel}, Geom. and Fun. Anal., 4 (1994),
-  pp.~374--398.
+%\bibitem{BN}
+%M.~Belkin and P.~Niyogi, {\em Using manifold structure for partially
+%  labelled classification}, Advances in NIPS, 15 (2003).
 
-\bibitem{CLAcha1}
-R.R.~Coifman and S.~Lafon, {\em Diffusion maps}, Appl. Comp. Harm. Anal.,
-  21 (2006), pp.~5--30.
+%\bibitem{BBG:EmbeddingRiemannianManifoldHeatKernel}
+%P.~B\'erard, G.~Besson, and S.~Gallot, {\em Embedding {R}iemannian
+%  manifolds by their heat kernel}, Geom. and Fun. Anal., 4 (1994),
+%  pp.~374--398.
+%
+%\bibitem{CLAcha1}
+%R.R.~Coifman and S.~Lafon, {\em Diffusion maps}, Appl. Comp. Harm. Anal.,
+%  21 (2006), pp.~5--30.
+%
+%\bibitem{DiffusionPNAS}
+%R.R.~Coifman, S.~Lafon, A.~Lee, M.~Maggioni, B.~Nadler, F.~Warner, and
+%  S.~Zucker, {\em Geometric diffusions as a tool for harmonic analysis and
+%  structure definition of data. {P}art {I}: Diffusion maps}, Proc. of Nat.
+%  Acad. Sci.,  (2005), pp.~7426--7431.
+%
+%\bibitem{Clementi:LowDimensionaFreeEnergyLandscapesProteinFolding}
+%P.~Das, M.~Moll, H.~Stamati, L.~Kavraki, and C.~Clementi, {\em
+%  Low-dimensional, free-energy landscapes of protein-folding reactions by
+%  nonlinear dimensionality reduction}, P.N.A.S., 103 (2006), pp.~9885--9890.
+%
+%\bibitem{DoGri}
+%D.~Donoho and C.~Grimes, {\em Hessian eigenmaps: new locally linear
+%  embedding techniques for high-dimensional data}, Proceedings of the National
+%  Academy of Sciences, 100 (2003), pp.~5591--5596.
+%
+%\bibitem{DoGri:WhenDoesIsoMap}
+%D.~L. Donoho and C.~Grimes, {\em When does isomap recover natural
+%  parameterization of families of articulated images?}, Tech. Report Tech. Rep.
+%  2002-27, Department of Statistics, Stanford University, August 2002.
+%
+%\bibitem{GruterWidman:GreenFunction}
+%M.~Gr\"uter and K.-O. Widman, {\em The {G}reen function for uniformly
+%  elliptic equations}, Man. Math., 37 (1982), pp.~303--342.
+%
+%\bibitem{Simon:NeumannEssentialSpectrum}
+%R.~Hempel, L.~Seco, and B.~Simon, {\em The essential spectrum of neumann
+%  laplacians on some bounded singular domains}, 1991.
+%
+%\bibitem{1}
+%Kadison, R.\ V.\ and Singer, I.\ M.\ (1959)
+%Extensions of pure states, {\it Amer.\ J.\ Math.\ \bf
+%81}, 383-400.
+%
+%\bibitem{2}
+%Anderson, J.\ (1981) A conjecture concerning the pure states of
+%$B(H)$ and a related theorem. in {\it Topics in Modern Operator
+%Theory}, Birkha\"user, pp.\ 27-43.
+%
 
-\bibitem{DiffusionPNAS}
-R.R.~Coifman, S.~Lafon, A.~Lee, M.~Maggioni, B.~Nadler, F.~Warner, and
-  S.~Zucker, {\em Geometric diffusions as a tool for harmonic analysis and
-  structure definition of data. {P}art {I}: Diffusion maps}, Proc. of Nat.
-  Acad. Sci.,  (2005), pp.~7426--7431.
-
-\bibitem{Clementi:LowDimensionaFreeEnergyLandscapesProteinFolding}
-P.~Das, M.~Moll, H.~Stamati, L.~Kavraki, and C.~Clementi, {\em
-  Low-dimensional, free-energy landscapes of protein-folding reactions by
-  nonlinear dimensionality reduction}, P.N.A.S., 103 (2006), pp.~9885--9890.
-
-\bibitem{DoGri}
-D.~Donoho and C.~Grimes, {\em Hessian eigenmaps: new locally linear
-  embedding techniques for high-dimensional data}, Proceedings of the National
-  Academy of Sciences, 100 (2003), pp.~5591--5596.
-
-\bibitem{DoGri:WhenDoesIsoMap}
-D.~L. Donoho and C.~Grimes, {\em When does isomap recover natural
-  parameterization of families of articulated images?}, Tech. Report Tech. Rep.
-  2002-27, Department of Statistics, Stanford University, August 2002.
-
-\bibitem{GruterWidman:GreenFunction}
-M.~Gr\"uter and K.-O. Widman, {\em The {G}reen function for uniformly
-  elliptic equations}, Man. Math., 37 (1982), pp.~303--342.
-
-\bibitem{Simon:NeumannEssentialSpectrum}
-R.~Hempel, L.~Seco, and B.~Simon, {\em The essential spectrum of neumann
-  laplacians on some bounded singular domains}, 1991.
-
-\bibitem{1}
-Kadison, R.\ V.\ and Singer, I.\ M.\ (1959)
-Extensions of pure states, {\it Amer.\ J.\ Math.\ \bf
-81}, 383-400.
-
-\bibitem{2}
-Anderson, J.\ (1981) A conjecture concerning the pure states of
-$B(H)$ and a related theorem. in {\it Topics in Modern Operator
-Theory}, Birkha\"user, pp.\ 27-43.
-
-\bibitem{3}
-Anderson, J.\ (1979) Extreme points in sets of
-positive linear maps on $B(H)$. {\it J.\ Funct.\
-Anal.\
-\bf 31}, 195-217.
-
-\bibitem{4}
-Anderson, J.\ (1979) Pathology in the Calkin algebra. {\it J.\
-Operator Theory \bf 2}, 159-167.
-
-\bibitem{5}
-Johnson, B.\ E.\ and Parrott, S.\ K.\ (1972) Operators commuting
-with a von Neumann algebra modulo the set of compact operators.
-{\it J.\ Funct.\ Anal.\ \bf 11}, 39-61.
-
-\bibitem{6}
-Akemann, C.\ and Weaver, N.\ (2004) Consistency of a
-counterexample to Naimark's problem. {\it Proc.\ Nat.\ Acad.\
-Sci.\ USA \bf 101}, 7522-7525.
-
-\bibitem{TSL}
-J.~Tenenbaum, V.~de~Silva, and J.~Langford, {\em A global geometric
-  framework for nonlinear dimensionality reduction}, Science, 290 (2000),
-  pp.~2319--2323.
-
-\bibitem{ZhaZha}
-Z.~Zhang and H.~Zha, {\em Principal manifolds and nonlinear dimension
-  reduction via local tangent space alignement}, Tech. Report CSE-02-019,
-  Department of computer science and engineering, Pennsylvania State
-  University, 2002.
-\end{thebibliography}
+%\end{thebibliography}
 
 %----------------------------------------------------------------------------------------
 
