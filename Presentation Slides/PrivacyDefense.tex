@@ -1,0 +1,453 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Beamer Presentation
+% LaTeX Template
+% Version 1.0 (10/11/12)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND THEMES
+%----------------------------------------------------------------------------------------
+
+\documentclass{beamer}
+
+\mode<presentation> {
+
+% The Beamer class comes with a number of default slide themes
+% which change the colors and layouts of slides. Below this is a list
+% of all the themes, uncomment each in turn to see what they look like.
+
+%\usetheme{default}
+%\usetheme{AnnArbor}
+%\usetheme{Antibes}
+%\usetheme{Bergen}
+%\usetheme{Berkeley}
+%\usetheme{Berlin}
+%\usetheme{Boadilla}
+%\usetheme{CambridgeUS}
+%\usetheme{Copenhagen}
+%\usetheme{Darmstadt}
+%\usetheme{Dresden}
+%\usetheme{Frankfurt}
+%\usetheme{Goettingen}
+%\usetheme{Hannover}
+%\usetheme{Ilmenau}
+%\usetheme{JuanLesPins}
+%\usetheme{Luebeck}
+\usetheme{Madrid}
+%\usetheme{Malmoe}
+%\usetheme{Marburg}
+%\usetheme{Montpellier}
+%\usetheme{PaloAlto}
+%\usetheme{Pittsburgh}
+%\usetheme{Rochester}
+%\usetheme{Singapore}
+%\usetheme{Szeged}
+%\usetheme{Warsaw}
+
+% As well as themes, the Beamer class has a number of color themes
+% for any slide theme. Uncomment each of these in turn to see how it
+% changes the colors of your current slide theme.
+
+%\usecolortheme{albatross}
+%\usecolortheme{beaver}
+%\usecolortheme{beetle}
+%\usecolortheme{crane}
+%\usecolortheme{dolphin}
+%\usecolortheme{dove}
+%\usecolortheme{fly}
+%\usecolortheme{lily}
+%\usecolortheme{orchid}
+%\usecolortheme{rose}
+%\usecolortheme{seagull}
+%\usecolortheme{seahorse}
+%\usecolortheme{whale}
+%\usecolortheme{wolverine}
+
+%\setbeamertemplate{footline} % To remove the footer line in all slides uncomment this line
+%\setbeamertemplate{footline}[page number] % To replace the footer line in all slides with a simple slide count uncomment this line
+
+%\setbeamertemplate{navigation symbols}{} % To remove the navigation symbols from the bottom of all slides uncomment this line
+}
+\usepackage[
+backend=biber,
+style=authoryear-icomp,
+sortlocale=de_DE,
+natbib=true,
+url=false, 
+doi=true,
+eprint=false
+]{biblatex}
+\addbibresource{bib.bib}
+\usepackage{graphicx} % Allows including images
+\graphicspath{{Images/}}
+\usepackage{caption}
+\captionsetup[figure]{font=footnotesize,labelfont=footnotesize}
+\usepackage{booktabs} % Allows the use of \toprule, \midrule and \bottomrule in tables
+
+%----------------------------------------------------------------------------------------
+%	TITLE PAGE
+%----------------------------------------------------------------------------------------
+
+\title[The best privacy defense is a good privacy offense]{The best privacy defense is a good privacy offense: Obfuscating a search engine user’s profile} % The short title appears at the bottom of every slide, the full title is only on the title page
+
+\author{Joshua Fenech \& Omar Salbrout} % Your name
+\institute[MLDM] % Your institution as it will appear on the bottom of every slide, may be shorthand to save space
+{University of Jean Monnet \\ % Your institution for the title page
+\medskip
+\textit{jfenech22@hotmail.com} % Your email address
+}
+\date{\today} % Date, can be changed to a custom date
+
+\begin{document}
+
+\begin{frame}
+\titlepage % Print the title page as the first slide
+\end{frame}
+
+\begin{frame}
+\frametitle{Overview} % Table of contents slide, comment this block out to remove it
+\tableofcontents % Throughout your presentation, if you choose to use \section{} and \subsection{} commands, these will automatically be printed on this slide as an overview of your presentation
+\end{frame}
+
+%----------------------------------------------------------------------------------------
+%	PRESENTATION SLIDES
+%----------------------------------------------------------------------------------------
+
+%------------------------------------------------
+%\section{First Section} % Sections can be created in order to organize your presentation into discrete blocks, all sections and subsections are automatically printed in the table of contents as an overview of the talk
+%------------------------------------------------
+
+%\subsection{Subsection Example} % A subsection can be created just before a set of slides with a common theme to further break down your presentation into chunks
+
+
+%------------------------------------------------
+\section{Introduction}
+\begin{frame}
+\frametitle{Companies can't be trusted}
+\begin{minipage}{0.4\textwidth}
+	\vbox to \textheight{
+		\vfill
+		\centering
+		\begin{figure}
+		\includegraphics[width=1\textwidth]{biggest-data-breaches.jpg}
+		\caption{www.csoonline.com/article/2130877/data-breach/the-16-biggest-data-breaches-of-the-21st-century.html}
+		\end{figure}
+		\vfill
+	}
+\end{minipage}\hfill
+\begin{minipage}{0.6\textwidth}
+	\vbox to \textheight{
+		\begin{itemize}
+			\item We trust that companies will protect our data
+			\item Data breaches are commonplace today
+			\item Unencrypted data is often leaked
+			\item There is currently no or little legal requirement to protect data, and therefore represents an additional cost that some companies try to avoid
+			\item Can we encrypt our own data before it is submitted to such companies?
+		\end{itemize}
+		\vfill
+	}
+\end{minipage}
+
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}
+\frametitle{Other methods of obfuscation}
+\begin{itemize}
+	\item Private browsing - no cookies stored, but... IP still revealed
+	\item Proxy servers to hide IP - web browser fingerprints still revealed
+	\item Ultimately, TOR for maximum anonymity
+	\item Problem - lose benefits that personalisation of websearches provides
+	\item Can an alternative means of securing privacy without more intensive [change intensive here] methods be found?
+\end{itemize}
+\end{frame}
+%------------------------------------------------
+
+\begin{frame}
+\frametitle{Structure of Presentation}
+\begin{itemize} %NeED TO FIX THIS
+	\item How do search engines 'know' what we want?
+	\item Present a new method of obfuscation related to adversarial data mining
+	\item Approach is explored in common setting of Internet search engines
+	\item A learning method is presented for environments where a user can get feedback from her or his counterpart
+\end{itemize}
+\end{frame}
+
+%------------------------------------------------
+\section{Method}
+%------------------------------------------------
+
+\begin{frame}
+\frametitle{Personalised Advertising}
+\begin{minipage}{0.4\textwidth}
+	\vbox to 0.9\textheight{
+		\vfill
+		\centering
+		\begin{figure}
+			\includegraphics[width=1\textwidth]{search-tree}
+			%\caption{www.csoonline.com/article/2130877/data-breach/the-16-biggest-data-breaches-of-the-21st-century.html}
+		\end{figure}
+		\vfill
+	}
+\end{minipage}\hfill
+\begin{minipage}{0.6\textwidth}
+	\vbox to 0.5\textheight{
+		\begin{itemize}
+			\item Which ad is displayed depends on
+				\subitem The submitted query
+				\subitem The user profile
+			\item Ads are assigned to categories
+			\item Users are assigned to categories
+		\end{itemize}
+		\vfill
+	}
+\end{minipage}
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}
+	\frametitle{Privacy Offense}
+	\begin{itemize} %NeED TO FIX THIS
+		\item To implement a method to defend privacy, we need:
+		\item A way to measure the privacy, i.e. objective function
+		\item $\sigma(\kappa_{i},P)=\sum(p_{j}d_T(\kappa_{i},\kappa_{j}))$
+		\item User interest category $\kappa$, distribution of probabilities $P$, category tree $T$ , tree distance $d_{T}$
+		\item Score $\sigma$ is the weighted distance between user interest category and current
+		category the user is assigned to
+	\end{itemize}
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}
+	\frametitle{Privacy Offense}
+	\begin{itemize} %NeED TO FIX THIS
+		\item To implement a method to defend privacy, we need:
+		\item A way to measure the privacy, i.e. objective function
+		\item $\sigma(\kappa_{i},P)=\sum(p_{j}d_T(\kappa_{i},\kappa_{j}))$
+		\item User interest category $\kappa$, distribution of probabilities $P$, category tree $T$ , tree distance $d_{T}$
+		\item Score $\sigma$ is the weighted distance between user interest category and current
+		category the user is assigned to
+	\end{itemize}
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}
+	\begin{itemize} %NeED TO FIX THIS
+	\item To implement a method to defend privacy, we need:
+	\item A way to measure the privacy, i.e. objective function
+	\item Method to use feedback (ads)
+	\end{itemize}
+\end{frame}
+
+%------------------------------------------------
+\begin{frame}
+	\frametitle{Category Prediction of an Ad}
+	\begin{minipage}{0.4\textwidth}
+		\vbox to 0.9\textheight{
+			\vfill
+			\centering
+			\begin{figure}
+				\includegraphics[width=1\textwidth]{search-tree}
+				%\caption{www.csoonline.com/article/2130877/data-breach/the-16-biggest-data-breaches-of-the-21st-century.html}
+			\end{figure}
+			\vfill
+		}
+	\end{minipage}\hfill
+	\begin{minipage}{0.6\textwidth}
+		\vbox to 0.5\textheight{
+			\begin{itemize}
+				\item Search engines provide example
+				queries for each category
+				\item Use sample queries of category tree as input and train independent classifiers – one for each category
+				\item Classifiers can be applied to queries, as well as any other text
+				\item Predictions on ads work very well due	to similar structure of the text
+			\end{itemize}
+			\vfill
+		}
+	\end{minipage}
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}
+	\frametitle{Privacy Offense}
+	\begin{itemize} %NeED TO FIX THIS
+		\item To implement a method to defend privacy, we need:
+		\item A way to measure the privacy, i.e. objective function
+		\item Method to use feedback (ads)
+		\item A set of actions
+	\end{itemize}
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}
+	\frametitle{Actions}
+	Definition of actions to choose one category $\kappa$ in the set of categories $K$ using
+	category tree $T$ based on reference category $_{ref}$
+	\begin{itemize} %NeED TO FIX THIS
+		\item Random: $a_{random} (T,\kappa_{ref}) = random select(\kappa_{r} \in K )$
+	\end{itemize}
+\end{frame}
+
+%------------------------------------------------
+\begin{frame}
+	\frametitle{Actions}
+	Definition of actions to choose one category $\kappa$ in the set of categories $K$ using
+	category tree $T$ based on reference category $_{ref}$
+	\begin{itemize} %NeED TO FIX THIS
+		\item Random: $a_{random} (T,\kappa_{ref}) = random select(\kappa_{r} \in K )$
+		\item Same: $a_{same}(T,\kappa_{ref})$
+	\end{itemize}
+\end{frame}
+
+%------------------------------------------------
+\begin{frame}
+	\frametitle{Actions}
+	Definition of actions to choose one category $\kappa$ in the set of categories $K$ using
+	category tree $T$ based on reference category $_{ref}$
+	\begin{itemize} %NeED TO FIX THIS
+		\item Random: $a_{random} (T,\kappa_{ref}) = random select(\kappa_{r} \in K )$
+		\item Same: $a_{same}(T,\kappa_{ref}) = \kappa_{ref}$
+		\item Sibling: $a_{same}(T,\kappa_{ref}) = sibling(\kappa_{ref} \in K)$
+	\end{itemize}
+\end{frame}
+
+%------------------------------------------------
+\begin{frame}
+	\frametitle{Actions}
+	Definition of actions to choose one category $\kappa$ in the set of categories $K$ using
+	category tree $T$ based on reference category $_{ref}$
+	\begin{itemize} %NeED TO FIX THIS
+		\item Random: $a_{random} (T,\kappa_{ref}) = random select(\kappa_{r} \in K )$
+		\item Same: $a_{same}(T,\kappa_{ref}) = \kappa_{ref}$
+		\item Sibling: $a_{same}(T,\kappa_{ref}) = sibling(\kappa_{ref} \in K)$
+		\item Most general: $a_{general}(T,\kappa_{ref}) = max\_parent(\kappa_{ref} \in K)$
+	\end{itemize}
+\end{frame}
+
+
+%------------------------------------------------
+\begin{frame}
+	\frametitle{Actions}
+	Definition of actions to choose one category $\kappa$ in the set of categories $K$ using
+	category tree $T$ based on reference category $_{ref}$
+	\begin{itemize} %NeED TO FIX THIS
+		\item Random: $a_{random} (T,\kappa_{ref}) = random select(\kappa_{r} \in K )$
+		\item Same: $a_{same}(T,\kappa_{ref}) = \kappa_{ref}$
+		\item Sibling: $a_{same}(T,\kappa_{ref}) = sibling(\kappa_{ref} \in K)$
+		\item Most general: $a_{general}(T,\kappa_{ref}) = max\_parent(\kappa_{ref} \in K)$
+		\item Most specialized of sibling: $a_{specialized} (T , \kappa_{ref} = lowest\_child(all_siblings(\kappa_{ref} \in K ))$
+	\end{itemize}
+\end{frame}
+
+%------------------------------------------------
+\begin{frame}
+	\frametitle{Actions}
+	Definition of actions to choose one category $\kappa$ in the set of categories $K$ using
+	category tree $T$ based on reference category $_{ref}$
+	\begin{itemize} %NeED TO FIX THIS
+		\item Random: $a_{random} (T,\kappa_{ref}) = random select(\kappa_{r} \in K )$
+		\item Same: $a_{same}(T,\kappa_{ref}) = \kappa_{ref}$
+		\item Sibling: $a_{same}(T,\kappa_{ref}) = sibling(\kappa_{ref} \in K)$
+		\item Most general: $a_{general}(T,\kappa_{ref}) = max\_parent(\kappa_{ref} \in K)$
+		\item Most specialized of sibling: $a_{specialized} (T , \kappa_{ref} = lowest\_child(all\_siblings(\kappa_{ref} \in K ))$
+		\item Distance-based: $a_{dist} (T , \kappa_{ref} ) = \kappa_{r} : \forall \kappa_{t} \in K, d(\kappa_{r} , \kappa_{ref} ) \geq d(\kappa t , \kappa_{ref} )$
+	\end{itemize}
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}
+	\frametitle{Figure}
+	\begin{figure}
+	\includegraphics[width=0.8\linewidth]{circle-from-slides-edit.png}
+	\end{figure}
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}
+	\frametitle{Experiments}
+	Users are given one interest category
+	and either:
+	\begin{itemize}
+		\item Use the proposed method, or
+		\item Submit queries from random
+		categories, or
+		\item Submit queries from the category
+		that is the furthest away from their
+		interest category
+		\item All users submit in 10\% of the cases
+		random queries from their interest
+		category
+	\end{itemize}
+	
+\end{frame}
+
+%------------------------------------------------
+\section{Results}
+\begin{frame}
+	\frametitle{Results}
+	\begin{figure}
+		\includegraphics[width=0.8\linewidth]{Results_crop}
+	\end{figure}
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}
+	\frametitle{Results}
+	\begin{itemize} %NeED TO FIX THIS
+		\item To implement a method to defend privacy, we need:
+		\item A way to measure the privacy, i.e. objective function
+		\item $\sigma(\kappa_{i},P)=\sum(p_{j}d_T(\kappa_{i},\kappa_{j}))$
+		\item User interest category $\kappa$, distribution of probabilities $P$, category tree $T$ , tree distance $d_{T}$
+		\item Score $\sigma$ is the weighted distance between user interest category and current
+		category the user is assigned to
+	\end{itemize}
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}
+	\frametitle{Conclusions}
+	\begin{itemize}
+		\item Does it work?
+		\begin{itemize}
+			\item Maybe
+		\end{itemize}
+		\item Simplified Model
+		\begin{itemize}
+			\item Only one interest category
+			\item Discard more aspects of the search engine’s model, e.g., time and date
+		\end{itemize}
+		\item Future Work
+		\begin{itemize}
+			\item More sophisticated model
+			\item Use more feedback than just the ads
+			\item Extend the use beyond search engines
+		\end{itemize}
+	\end{itemize}
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}
+\Huge{\centerline{Questions}}
+\end{frame}
+
+%----------------------------------------------------------------------------------------
+
+\end{document} 
