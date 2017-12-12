@@ -195,14 +195,7 @@ Since the growth rate of the Internet is almost exponential, it has a drastic ef
 \section{Introduction}
 
 \dropcap{T}he motivation behind providing this approach is that the current privacy protection have major flaws. On one hand, users rely on service providers to process their data, on the other hand, providers do not have any advantage in user privacy preserving technologies as the analysis of this data and sharing it with advertisers is the basis of their business model. No doubt that providers such as search engines must store information on users. Nevertheless, these data can be used to generate detailed profiles on a large scale and identify unidentified users. As mentioned, J\"{o}rg Wicker and Stefan Kramer target privacy from another perspective. Hence, they suggest a user tools to defend her or his privacy so the user does not have to rely on the other uncontrollable side for this issue. Data is conventionally stored in large scales
-and analyzed automatically using data mining technologies. As a result, the intuitive approach to protect the user’s private information would be to flood the data storage with random data and hope the user’s interest or identity would be obfuscated. On the contrary, data mining algorithms are designed to distinguish a signal from random noise. Consequently, this approach will fail in most settings where the data is analyzed with sophisticated data mining algorithms. The paper tackles this issue in a more highly developed manner as it gives a brief discussion of the user and search engine model in addition to the proposed method. Moreover, it shows the details of the experimental set-up and results. Taking into account, the paper should be considered as proof-of-concept and not a final product ready for the market. In this review, we present pointers for the given approach and criticize it by explaining its strong arguments and also its weak ones. This is not meant to be a summary of the tackled paper as we merely mention concepts and do not dive into details.\cite{CLAcha1}.
-
-%\begin{equation}
-%\mfrac{D \theta}{Dt}=\mfrac{\pr \theta}{\pr t} + u\cdot \nabla
-%\theta=0 \label{qg1}
-%\end{equation}
-
-%Referencing equation \eqref{qg1}. 
+and analyzed automatically using data mining technologies. As a result, the intuitive approach to protect the user’s private information would be to flood the data storage with random data and hope the user’s interest or identity would be obfuscated. On the contrary, data mining algorithms are designed to distinguish a signal from random noise. Consequently, this approach will fail in most settings where the data is analyzed with sophisticated data mining algorithms. The paper tackles this issue in a more highly developed manner as it gives a brief discussion of the user and search engine model in addition to the proposed method. Moreover, it shows the details of the experimental set-up and results. Taking into account, the paper should be considered as proof-of-concept and not a final product ready for the market. In this review, we present pointers for the given approach and criticize it by explaining its strong arguments and also its weak ones. This is not meant to be a summary of the tackled paper as we merely mention concepts and do not dive into details.\cite{CLAcha1}. 
 
 %------------------------------------------------
 
@@ -215,20 +208,42 @@ Another obstacle that might be rather unavoidable is that obfuscating a search e
 
 In addition, obfuscating search engines and service providers waste their resources and invalidates their research results and statistical studies that might lead to new applications based on the user's needs. These needs are usually investigated by online surveys and mining user data which will be useless because of mining fake or randomized data. 
 
-%\ref{placeholder}.
+%------------------------------------------------
 
 \section{Method}
-Since the full knowledge of the states and information of the search engine are not available, the algorithm behaves according to only the feedback from the search engine in the form of ads.
+Since the full knowledge of the states and information of the search engine are not available, the algorithm behaves according to only the feedback from the search engine in the form of ads. The method of such approach is to based on text ads, which is certainly a limitation as mass media now depends on many more forms of advertisement that involve audio and video. Nonetheless, it is considered a great start though and a milestone for promising future work. Service provider such as search engines display targeted ads depending on the submitted query by the user which must go through an interest category process to categorize the query. In addition, displayed ads also depend on the user's profile. This plays a greater role specially for advertisers as dedicating ads to targeted audience is more efficient and promises perfecting the selling point.
 
-\subsection{Simulations}
+For such process to succeed, ads must be processed and assigned to categories in advance to be displayed to their matching needs. Not only ads are assigned, but also users are assigned to categories depending on their profiles either by their user accounts or by artificial ones depending on IP tracking and cookies.
 
-\subsubsection{Simulation 1}
+Revisiting the concept of privacy defense which is the main purpose of J\"{o}rg Wicker's and Stefan Kramer's method, privacy metrics and standards must be presented to evaluate such method. For instance, an objective function is presented in the paper for such purpose \eqref{eq1}.
+
+\begin{equation}
+\sigma(\kappa_i, P) = \sum_{p_j\in P, \kappa_j\in T}^{} p_j d_T(\kappa_i, \kappa_j)
+\label{eq1}
+\end{equation}
+
+%Referencing equation \eqref{qg1}.
+
+According to this notation, the user's interest category is expressed with $\kappa$ and these categories are predefined by the search engine. Moreover, $P$ represents the distribution of probabilities of the categories, $T$ represents the category tree and $d_T$ is the tree distance. This objective function is explained in details in the original paper. However, our report is not interested in such redundancy. Our interest resides in the significance of $\sigma$ which represents the score or the distance between the user's current interest category and the assigned category to the user. This $\sigma$ shows how the approach appears to be dynamic and it also shows the space margin of the algorithm to learn from the search engine's response to ad displaying.
+
+The second component that is required for privacy defense is using the feedback of ads. This opens the discussion of category prediction of ads because search engines provide example queries for each category. These example queries or sample queries of category trees are the main input to train classifiers for ad categorization. Not only one classifier in this case, but as many classifiers as the number of available categories as every category has its own classifier. After certain training period, these classifiers can be used for more than classifying queries. Also, they can be used to classify any plain text which enables processing all text-based ads. As a result, prediction on ads works very well thanks to the similarities of structure between queries and text-based ads.
+
+%------------------------------------------------
+
+\section{Experiment}
+
 
 Vivamus magna enim, alique
 
 %------------------------------------------------
 
-\section{Discussion}
+\section{Result}
+
+Nam fermentum.
+
+%------------------------------------------------
+
+\section{Conclusion}
 
 Nam fermentum.
 
@@ -239,58 +254,58 @@ Nam fermentum.
 %% Optional Materials and Methods Section
 %% The Materials and Methods section header will be added automatically.
 
-\begin{materials}
-Suspendisse viverra eleifend nulla at facilisis. Nullam eget tellus orci. Cras sit amet lorem velit. Maecenas rhoncus pellentesque orci eget vulputate. Phasellus massa nisi, mattis nec elementum accumsan, blandit non neque. In ac enim elit, sit amet luctus ante. Cras feugiat commodo lectus, vitae convallis dui sagittis id. In in tellus lacus, sed lobortis eros. Phasellus sit amet eleifend velit. Duis ornare dapibus porttitor. Maecenas eros velit, dignissim at egestas in, tincidunt lacinia erat. Proin elementum mi vel lectus suscipit fringilla. Mauris justo est, ullamcorper in rutrum interdum, accumsan eget mi. Maecenas ut massa aliquet purus eleifend vehicula in a nisi. Fusce molestie cursus lacinia.
-
-\begin{definition}
-A bounded function $\theta$ is a weak solution of QG if for any
-$\phi\,\epsilon\,
-C_0^{\infty}(\fdb\times\mathbb{R}\times[0,\vep])$ we have
-\begin{eqnarray}
-&&  \int_{\mathbb{R}^+\times\fd\times\mathbb{R}} \hspace{-25pt}
- \theta(x,y,t)\, \pr_t \phi
-\,(x,y,t) dy dx dt+\nonumber\\
-  & +&\int_{\mathbb{R}^+\times\fd\times\mathbb{R}}
-\hspace{-26pt} \theta\,(x,y,t) u(x,y,t)\cdot\nabla\phi\,(x,y,t)
-dydxdt = 0 \label{weaksol} \end{eqnarray}
-where $u$ is determined previously.
-\end{definition}
-
-Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris eu sapien nunc, sit amet accumsan dui. Nulla ac diam ut nunc placerat semper eget et libero. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Cras hendrerit ullamcorper sapien vitae luctus. Quisque vel diam massa. Vestibulum dui nibh, facilisis vel vestibulum eu, viverra in quam.
-
-\begin{theorem}
-If the active scalar $\theta$ satisfies
-the equation \eqref{weaksol}, then $\varphi$ satisfies the equation
-\begin{eqnarray}
-\mfrac{\pr \varphi}{\pr t}(x,t)&=&\hspace{-2pt}\dst
-\int_{\fd}\mfrac{\mfrac{\pr \varphi}{\pr x}(x,t)-\mfrac{\pr
-\varphi}{\pr
-u}(u,t)}{[(x-u)^{2}+(\varphi(x,t)-\varphi(u,t))^{2}]^{\f12}}\nonumber\\
-&&
-\chi(x-u,\varphi(x,t)-\varphi(u,t)) du \hspace{3pt} +
-\nonumber\\
-&+&\dst \int_{\fd} \Big{[}\mfrac{\pr \varphi} {\pr
-x}(x,t)-\mfrac{\pr \varphi}{\pr u} (u,t)\Big{]}
-\nonumber\\&&
-\eta(x-u,\varphi(x,t)-\varphi(u,t)) du + Error
-\end{eqnarray}
-with $|Error|\leq C\, \delta | log\delta| $ where $C$ depends only
-on $\|\theta\|_{L^{\infty}}$ and $\|
-\nabla\varphi\|_{L^{\infty}}$.
-\end{theorem}
-
-Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Integer accumsan ornare tortor at varius. Phasellus ullamcorper blandit dolor sit amet tempus. Curabitur ligula urna, ultrices in iaculis eu, eleifend vel urna. Praesent ullamcorper imperdiet purus, ut interdum sem interdum dictum. Proin euismod volutpat eros ac mattis. Quisque sit amet massa ac tortor cursus malesuada at vitae nisi. Nam quis neque et nunc vehicula cursus sit amet at tellus.
-\end{materials}
+%\begin{materials}
+%Suspendisse viverra eleifend nulla at facilisis. Nullam eget tellus orci. Cras sit amet lorem velit. Maecenas rhoncus pellentesque orci eget vulputate. Phasellus massa nisi, mattis nec elementum accumsan, blandit non neque. In ac enim elit, sit amet luctus ante. Cras feugiat commodo lectus, vitae convallis dui sagittis id. In in tellus lacus, sed lobortis eros. Phasellus sit amet eleifend velit. Duis ornare dapibus porttitor. Maecenas eros velit, dignissim at egestas in, tincidunt lacinia erat. Proin elementum mi vel lectus suscipit fringilla. Mauris justo est, ullamcorper in rutrum interdum, accumsan eget mi. Maecenas ut massa aliquet purus eleifend vehicula in a nisi. Fusce molestie cursus lacinia.
+%
+%\begin{definition}
+%A bounded function $\theta$ is a weak solution of QG if for any
+%$\phi\,\epsilon\,
+%C_0^{\infty}(\fdb\times\mathbb{R}\times[0,\vep])$ we have
+%\begin{eqnarray}
+%&&  \int_{\mathbb{R}^+\times\fd\times\mathbb{R}} \hspace{-25pt}
+% \theta(x,y,t)\, \pr_t \phi
+%\,(x,y,t) dy dx dt+\nonumber\\
+%  & +&\int_{\mathbb{R}^+\times\fd\times\mathbb{R}}
+%\hspace{-26pt} \theta\,(x,y,t) u(x,y,t)\cdot\nabla\phi\,(x,y,t)
+%dydxdt = 0 \label{weaksol} \end{eqnarray}
+%where $u$ is determined previously.
+%\end{definition}
+%
+%Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris eu sapien nunc, sit amet accumsan dui. Nulla ac diam ut nunc placerat semper eget et libero. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Cras hendrerit ullamcorper sapien vitae luctus. Quisque vel diam massa. Vestibulum dui nibh, facilisis vel vestibulum eu, viverra in quam.
+%
+%\begin{theorem}
+%If the active scalar $\theta$ satisfies
+%the equation \eqref{weaksol}, then $\varphi$ satisfies the equation
+%\begin{eqnarray}
+%\mfrac{\pr \varphi}{\pr t}(x,t)&=&\hspace{-2pt}\dst
+%\int_{\fd}\mfrac{\mfrac{\pr \varphi}{\pr x}(x,t)-\mfrac{\pr
+%\varphi}{\pr
+%u}(u,t)}{[(x-u)^{2}+(\varphi(x,t)-\varphi(u,t))^{2}]^{\f12}}\nonumber\\
+%&&
+%\chi(x-u,\varphi(x,t)-\varphi(u,t)) du \hspace{3pt} +
+%\nonumber\\
+%&+&\dst \int_{\fd} \Big{[}\mfrac{\pr \varphi} {\pr
+%x}(x,t)-\mfrac{\pr \varphi}{\pr u} (u,t)\Big{]}
+%\nonumber\\&&
+%\eta(x-u,\varphi(x,t)-\varphi(u,t)) du + Error
+%\end{eqnarray}
+%with $|Error|\leq C\, \delta | log\delta| $ where $C$ depends only
+%on $\|\theta\|_{L^{\infty}}$ and $\|
+%\nabla\varphi\|_{L^{\infty}}$.
+%\end{theorem}
+%
+%Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Integer accumsan ornare tortor at varius. Phasellus ullamcorper blandit dolor sit amet tempus. Curabitur ligula urna, ultrices in iaculis eu, eleifend vel urna. Praesent ullamcorper imperdiet purus, ut interdum sem interdum dictum. Proin euismod volutpat eros ac mattis. Quisque sit amet massa ac tortor cursus malesuada at vitae nisi. Nam quis neque et nunc vehicula cursus sit amet at tellus.
+%\end{materials}
 
 %----------------------------------------------------------------------------------------
 %	APPENDICES (OPTIONAL)
 %----------------------------------------------------------------------------------------
 
-\appendix
-An appendix without a title.
+%\appendix
+%An appendix without a title.
 
-\appendix[Appendix title]
-An appendix with a title.
+%\appendix[Appendix title]
+%An appendix with a title.
 
 %----------------------------------------------------------------------------------------
 %	ACKNOWLEDGEMENTS
@@ -432,10 +447,10 @@ Z.~Zhang and H.~Zha, {\em Principal manifolds and nonlinear dimension
 %% \caption{Almost Sharp Front}\label{afoto}
 %% \end{figure}
 
-\begin{figure}[h]
-\centerline{\includegraphics[width=0.4\linewidth]{placeholder.jpg}}
-\caption{Figure caption}\label{placeholder}
-\end{figure}
+%\begin{figure}[h]
+%\centerline{\includegraphics[width=0.4\linewidth]{placeholder.jpg}}
+%\caption{Figure caption}\label{placeholder}
+%\end{figure}
 
 %% For Tables, put caption above table
 %%
@@ -451,18 +466,18 @@ Z.~Zhang and H.~Zha, {\em Principal manifolds and nonlinear dimension
 %% \end{tabular}
 %% \end{table}
 
-\begin{table}[h]
-\caption{Table caption}\label{sampletable}
-\begin{tabular}{l l l}
-\hline
-\textbf{Treatments} & \textbf{Response 1} & \textbf{Response 2}\\
-\hline
-Treatment 1 & 0.0003262 & 0.562 \\
-Treatment 2 & 0.0015681 & 0.910 \\
-Treatment 3 & 0.0009271 & 0.296 \\
-\hline
-\end{tabular}
-\end{table}
+%\begin{table}[h]
+%\caption{Table caption}\label{sampletable}
+%\begin{tabular}{l l l}
+%\hline
+%\textbf{Treatments} & \textbf{Response 1} & \textbf{Response 2}\\
+%\hline
+%Treatment 1 & 0.0003262 & 0.562 \\
+%Treatment 2 & 0.0015681 & 0.910 \\
+%Treatment 3 & 0.0009271 & 0.296 \\
+%\hline
+%\end{tabular}
+%\end{table}
 
 %% For two column figures and tables, use the following:
 
